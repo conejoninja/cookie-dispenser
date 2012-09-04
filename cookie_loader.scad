@@ -50,8 +50,13 @@ difference() {
 				}
 			}
 			rotate([0,0,-18]) {
-				translate([-85,-6,-5]) {
-					cylinder(10, 3, 3);
+				translate([-85,-9,-5]) {
+					cylinder(10, 6, 6);
+				}
+			}
+			rotate([0,0,-18]) {
+				translate([-78,-9,-5]) {
+					cylinder(10, 2.5, 2.5);
 				}
 			}
 		}
