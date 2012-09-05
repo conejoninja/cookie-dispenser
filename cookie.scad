@@ -7,19 +7,22 @@ difference() {
 			}
 		}
 		union() {
-			translate([0,-36,3]) {
-				cube([36,72,7]);
+			rotate([0,0,270]) {
+				translate([-10,0,3]) {
+					cube([20,36,7]);
+				}
 			}
-
-			union() {
+			translate([0,-36,3]) {
+				cube([12,72,7]);
+			}
+			translate([20,-36,3]) {
+				cube([10,72,7]);
+			}			translate([-15,-36,25]) {
+				cube([30,72,70]);
+			}
+			rotate([0,0,90]) {
 				translate([-15,-36,25]) {
 					cube([30,72,70]);
-				}
-		
-				rotate([0,0,90]) {
-					translate([-15,-36,25]) {
-						cube([30,72,70]);
-					}
 				}
 			}
 		}
@@ -32,7 +35,7 @@ difference() {
 	}
 }
 
-
+			
 
 module tri(b,c,h) {
 	polyhedron( 
