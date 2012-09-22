@@ -20,6 +20,16 @@ difference() {
 			}
 
 			translate([0,3,0]) {
+				rotate([0,0,180-18]) {
+					translate([30,11,0]) {
+						rotate([0,0,-20]) {
+							cube([30,3,10]);
+						}
+					}
+				}
+			}
+
+			translate([0,3,0]) {
 				rotate([0,0,180+25.5]) {
 					translate([34,0,0]) {
 						cube([47,3,10]);
@@ -92,6 +102,9 @@ rotate([0,0,-18]) {
 		cube([30,6,3]);
 	}
 }
+
+
+
 
 
 module tri(b,c,h) {
