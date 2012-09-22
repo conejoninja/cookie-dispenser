@@ -1,41 +1,64 @@
 difference() {
 	difference() {
 		difference() {
-			cylinder(70, 35.5, 35.5);
+			cylinder(70, 36.5, 36.5);
 			translate([0,0,3]){
-				cylinder(70, 32.5, 32.5);
+				cylinder(70, 33.5, 33.5);
 			}
 		}
 		union() {
 			rotate([0,0,270]) {
 				translate([-10,0,3]) {
-					cube([20,36,7]);
+					cube([20,50,7]);
 				}
 			}
-			translate([0,-36,3]) {
-				cube([12,72,7]);
+			translate([0,-40,3]) {
+				cube([12,80,7]);
 			}
-			translate([20,-36,3]) {
-				cube([10,72,7]);
-			}			translate([-15,-36,25]) {
-				cube([30,72,70]);
+			translate([20,-40,3]) {
+				cube([10,80,7]);
+			}
+			translate([-15,-40,25]) {
+				cube([30,80,70]);
 			}
 			rotate([0,0,90]) {
-				translate([-15,-36,25]) {
-					cube([30,72,70]);
+				translate([-15,-40,25]) {
+					cube([30,80,70]);
 				}
 			}
 		}
+
+		translate([0,0,-5]) {
+			rotate([0,0,90]) {
+				difference() {
+					cylinder(10, 33.5, 33.5);
+					translate([-40,0,-5]){
+						cube([80,40,20]);
+					}
+				}
+			}
+		}
+
+
 	}
 
-	translate([0,0,3]) {
-		rotate([0,0,180-18]) {
-			tri(40,36,7);
+	difference() {
+		translate([0,0,3]) {
+			rotate([0,0,180-18]) {
+				tri(40,36,7);
+			}
+		}
+		translate([0,0,3]) {
+			rotate([0,0,180-18]) {
+				tri(40,12,7);
+			}
 		}
 	}
 }
 
-			
+cylinder(3, 14, 14);
+
+
 
 module tri(b,c,h) {
 	polyhedron( 

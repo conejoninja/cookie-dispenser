@@ -67,6 +67,32 @@ difference() {
 	}
 }
 
+difference() {
+	rotate([0,0,-18]) {
+		translate([-85,-9,0]) {
+			difference() {
+				cylinder(3, 42, 42);
+				union() {
+					cylinder(3, 35, 35);
+					cube([10,10,10]);
+				}
+			}
+		}
+	}
+
+
+	rotate([0,0,-18]) {
+		translate([-140,0,-4]) {
+			cube([100,40,10]);
+		}
+	}
+}
+rotate([0,0,-18]) {
+	translate([-120,-6,0]) {
+		cube([30,6,3]);
+	}
+}
+
 
 module tri(b,c,h) {
 	polyhedron( 
