@@ -12,3 +12,9 @@ Page at Thingiverse : http://www.thingiverse.com/thing:30974
 Video of it working (v2) : http://www.youtube.com/watch?v=gZFIyuBQAS8
 
 Set of photos : http://www.flickr.com/photos/_conejo/sets/72157631596768732/
+
+
+CHANGELOG 28-09-2012
+--------------------
+
+Added a height top thing to keep the cookies from falling
