@@ -1,31 +1,40 @@
-// Sweep
-// by BARRAGAN <http://barraganstudio.com> 
-// This example code is in the public domain.
-
-
 #include <Servo.h> 
  
-Servo myservo;  // create servo object to control a servo 
-                // a maximum of eight servo objects can be created 
+Servo myservo;
  
-int pos = 0;    // variable to store the servo position 
- 
-void setup() 
-{ 
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object 
-} 
- 
- 
-void loop() 
-{ 
-  for(pos = 0; pos < 140; pos += 1)  // goes from 0 degrees to 180 degrees 
-  {                                  // in steps of 1 degree 
-    myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-    delay(15);                       // waits 15ms for the servo to reach the position 
-  } 
-  for(pos = 140; pos>=1; pos-=1)     // goes from 180 degrees to 0 degrees 
-  {                                
-    myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-    delay(15);                       // waits 15ms for the servo to reach the position 
-  } 
-} 
+void setup() {
+  Serial.begin(9600);
+  myservo.attach(9);
+  myservo.write(150);
+}
+
+
+void loop() {
+  if (Serial.available() > 0) {
+    char inByte = Serial.read();
+    if(inByte=='1') {
+      cookieOut();
+    }
+  }
+}
+
+void moveServo(int from, int to) {
+  int dir = 1;
+  if(to<from) {
+    dir = -1;
+  }
+  int pos = from;
+  while(pos!=to) {
+    myservo.write(pos);
+    pos = pos+dir;
+    delay(20);
+  }
+  
+}
+
+void cookieOut() {
+  moveServo(140, 10);
+  delay(100);
+  moveServo(10, 140);
+  delay(500);
+}
