@@ -5,7 +5,7 @@ Servo myservo;
 void setup() {
   Serial.begin(9600);
   myservo.attach(9);
-  myservo.write(150);
+  myservo.write(140);
 }
 
 
