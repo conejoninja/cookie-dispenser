@@ -18,3 +18,5 @@ CHANGELOG 28-09-2012
 --------------------
 
 Added a height top thing to keep the cookies from falling
+
+:trollface:
